@@ -1,0 +1,57 @@
+@import '../../vendors/bootstrap-5.1.3/scss/bootstrap-grid.scss';
+@import '../../vendors/bootstrap-5.1.3/scss/bootstrap-utilities.scss';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.upload-box{
+    color: #22d618;
+    border: 1px dashed #22d618;
+    text-align: center;
+    border-radius: 10px;
+    height: 200px;
+    cursor: pointer;
+    P{
+        position: relative;
+        font-size: 5rem;
+        font-weight: 300;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.upload-image{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+    p{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        color: red;
+        font-size: 20px;
+    }
+}
+
+#file{
+    opacity: 0;
+}
