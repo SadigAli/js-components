@@ -5903,12 +5903,12 @@ h2 {
     height: 200px;
     border-radius: 10px;
     overflow: hidden; }
-  .upload-image p {
+  .upload-image i {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -15px;
+    right: -15px;
     color: red;
-    font-size: 20px; }
+    font-size: 18px; }
 
 #file {
   opacity: 0; }

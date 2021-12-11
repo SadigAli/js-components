@@ -1,0 +1,41 @@
+@import '../../vendors/bootstrap-5.1.3/scss/bootstrap-utilities.scss';
+@import '../../vendors/bootstrap-5.1.3/scss/bootstrap-grid.scss';
+@import '../../vendors/bootstrap-5.1.3/scss/forms';
+@import '../../vendors/bootstrap-5.1.3/scss/buttons';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+}
+h1{
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 1.63rem;
+}
+
+.todolist{ 
+    .form-group{
+        position: relative;
+        button{
+            position: absolute;
+            top: 0;
+            @for $i from 20 through 0 {
+                &:nth-child(#{$i}){
+                    right: -$i*50+150px;
+                }
+            }
+        }
+    }
+    &>div{
+        &:not(:last-child){
+            border-right: 1px solid #e6e6e6;
+        }
+        min-height: 200px;
+    }
+}

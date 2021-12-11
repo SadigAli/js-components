@@ -16,22 +16,24 @@ file.addEventListener('change',function(e){
             col3.classList.add('col-lg-3','col-md-6');
             let uploadImg = document.createElement('div');
             uploadImg.classList.add('upload-image');
+            uploadImg
             let img = document.createElement('img');
             img.setAttribute('src',e.target.result);
-            let p = document.createElement('p');
-            p.innerText = 'x';
+            let i = document.createElement('i');
+            i.classList.add('bi','bi-x-lg');
             col3.append(uploadImg);
-            uploadImg.append(img,p);
-            // document.querySelector('.upload-container').prepend(`<div class="col-lg-3 col-md-6">
-            //     <div class="upload-image">
-            //         <img src="${e.target.result}" alt="image">
-            //         <p>x</p>
-            //     </div>
-            // </div>`);
-
+            uploadImg.append(img,i);
             document.querySelector('.upload-container').prepend(col3);
+
+            let closes = document.querySelectorAll('.bi-x-lg');
+            closes.forEach(close => {
+                close.addEventListener('click',function(){
+                    close.parentElement.parentElement.remove();
+                })
+            });
         });
 
         reader.readAsDataURL(file);
-        }
+    }
+    e.target.files.lenght=0;
 })

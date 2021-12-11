@@ -88,7 +88,7 @@ function getTodoList(){
                         </button>
                     </td>
                 </tr>
-        `
+            `
         });
         let editBtns = document.querySelectorAll('.edit');
         let deleteBtns = document.querySelectorAll('.delete');
