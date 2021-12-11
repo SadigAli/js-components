@@ -9,6 +9,20 @@ uploadBox.addEventListener('click',function(){
 
 file.addEventListener('change',function(e){
     let files = e.target.files;
+    uploadFiles(files);
+});
+
+
+uploadBox.addEventListener('dragover',function(e){
+    e.preventDefault();
+});
+
+uploadBox.addEventListener('drop',function(e){
+    e.preventDefault();
+    uploadFiles(e.dataTransfer.files);
+});
+
+function uploadFiles(files){
     for (let file of files) {
         let reader = new FileReader();
         reader.addEventListener('loadend',function(e){
@@ -16,7 +30,6 @@ file.addEventListener('change',function(e){
             col3.classList.add('col-lg-3','col-md-6');
             let uploadImg = document.createElement('div');
             uploadImg.classList.add('upload-image');
-            uploadImg
             let img = document.createElement('img');
             img.setAttribute('src',e.target.result);
             let i = document.createElement('i');
@@ -35,5 +48,4 @@ file.addEventListener('change',function(e){
 
         reader.readAsDataURL(file);
     }
-    e.target.files.lenght=0;
-})
+}
