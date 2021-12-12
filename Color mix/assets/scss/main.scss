@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 800px;
+    margin: 100px auto;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .little-circle-area{
+            display: flex;
+            flex-wrap: wrap;
+            width: 150px;
+            height: 150px;
+            .box{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                &:not(:nth-child(3n)){
+                    margin-right: 15px;
+                }
+            }
+        }
+        .big-circle-area{
+            width: 150px;
+            height: 150px;
+            .box{
+                width:120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
