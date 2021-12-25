@@ -3,7 +3,6 @@
 let dragBoxes = document.querySelectorAll('.little-circle-area .box');
 let bigBox = document.querySelector('.big-circle-area .box');
 
-
 dragBoxes.forEach(box=>{
     colorize(box);
     box.addEventListener('dragstart',function(e){
